@@ -12,7 +12,54 @@ dependencies {
 }
 ```
 
-2. Using SaralSecugenReader in Activity
+2. Manifest data
+```manifest file
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.compulynx.samplebiometric">
+
+    <uses-feature android:name="android.hardware.usb.host" />  //add this line
+
+    <uses-permission android:name="android.permission.USB_PERMISSION" />  //add this line
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.compulynx.samplebiometric.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            //add below intent filter
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            //add this metadata
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+    </application>
+
+</manifest>
+```
+
+
+3. Using SaralSecugenReader in Activity
 
 ```java
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
