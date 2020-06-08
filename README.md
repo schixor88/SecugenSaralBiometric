@@ -49,6 +49,7 @@ dependencies {
             </intent-filter>
 
             <!--add this metadata-->
+            <!--find device filter file in sample app-->
             <meta-data
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter" />
