@@ -13,15 +13,16 @@ dependencies {
 ```
 
 2. Manifest data
-```manifest file
-
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.compulynx.samplebiometric">
 
-    <uses-feature android:name="android.hardware.usb.host" />  //add this line
+    <!--add this line-->
+    <uses-feature android:name="android.hardware.usb.host" />  
 
-    <uses-permission android:name="android.permission.USB_PERMISSION" />  //add this line
+    <!--add this line-->
+    <uses-permission android:name="android.permission.USB_PERMISSION" /> 
 
     <application
         android:allowBackup="true"
@@ -42,12 +43,12 @@ dependencies {
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             
-            //add below intent filter
+            <!--add below intent filter-->
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
             </intent-filter>
 
-            //add this metadata
+            <!--add this metadata-->
             <meta-data
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter" />
