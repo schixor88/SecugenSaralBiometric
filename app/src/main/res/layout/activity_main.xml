@@ -9,11 +9,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="11dp"
-        android:layout_y="465dp"
-        android:text="@string/register"
+        android:layout_y="400dp"
+        android:text="@string/done"
         android:textSize="28sp" />
 
     <Button
+        android:visibility="gone"
         android:id="@+id/buttonMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
         android:textSize="28sp" />
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/imageViewVerify"
         android:layout_width="130dp"
         android:layout_height="150dp"
@@ -84,6 +86,7 @@
         android:src="@android:drawable/picture_frame" />
 
     <ImageView
+        android:visibility="gone"
         android:id="@+id/imageViewRegister"
         android:layout_width="130dp"
         android:layout_height="150dp"
@@ -97,11 +100,12 @@
         android:layout_width="208dp"
         android:layout_height="240dp"
         android:layout_x="13dp"
-        android:layout_y="61dp"
+        android:layout_y="100dp"
         android:contentDescription="@string/fingerprint_capture_image"
         android:src="@android:drawable/picture_frame" />
 
     <CheckBox
+        android:visibility="gone"
         android:id="@+id/checkBoxMatched"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,6 +114,7 @@
         android:text="@string/cb_matched" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/textViewResult"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
@@ -128,6 +133,8 @@
         android:src="@drawable/hamster4" />
 
     <Button
+        android:layout_y="10sp"
+        android:layout_x="10dp"
         android:id="@+id/buttonCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
