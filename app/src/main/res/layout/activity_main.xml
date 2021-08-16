@@ -8,8 +8,8 @@
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="400dp"
+        android:layout_x="20dp"
+        android:layout_y="453dp"
         android:text="@string/done"
         android:textSize="28sp" />
 
@@ -133,12 +133,12 @@
         android:src="@drawable/hamster4" />
 
     <Button
-        android:layout_y="10sp"
-        android:layout_x="10dp"
         android:id="@+id/buttonCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_x="17dp"
+        android:layout_y="372dp"
         android:text="@string/capture"
         android:textSize="28sp" />
 
