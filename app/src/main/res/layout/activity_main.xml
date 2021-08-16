@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/AbsoluteLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonCapture"
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_x="20dp"
         android:layout_y="453dp"
         android:text="@string/done"
         android:textSize="28sp" />
 
     <Button
-        android:visibility="gone"
         android:id="@+id/buttonMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="170dp"
         android:layout_y="465dp"
         android:text="@string/match"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        android:visibility="gone" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -76,52 +80,61 @@
         android:textSize="28sp" />
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/imageViewVerify"
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:layout_x="145dp"
         android:layout_y="310dp"
         android:contentDescription="@string/fingerprint_verify_image"
-        android:src="@android:drawable/picture_frame" />
+        android:src="@android:drawable/picture_frame"
+        android:visibility="gone" />
 
     <ImageView
-        android:visibility="gone"
+
         android:id="@+id/imageViewRegister"
         android:layout_width="130dp"
         android:layout_height="150dp"
         android:layout_x="14dp"
         android:layout_y="310dp"
         android:contentDescription="@string/fingerprint_register_image"
-        android:src="@android:drawable/picture_frame" />
+        android:src="@android:drawable/picture_frame"
+        android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/imageViewFingerprint"
-        android:layout_width="208dp"
-        android:layout_height="240dp"
-        android:layout_x="13dp"
-        android:layout_y="100dp"
-        android:contentDescription="@string/fingerprint_capture_image"
-        android:src="@android:drawable/picture_frame" />
+    <androidx.cardview.widget.CardView
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonCapture"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/imageViewFingerprint"
+            android:layout_width="208dp"
+            android:layout_height="240dp"
+            android:src="@drawable/ic_baseline_fingerprint_24"
+            android:contentDescription="@string/fingerprint_capture_image" />
+
+    </androidx.cardview.widget.CardView>
+
 
     <CheckBox
-        android:visibility="gone"
         android:id="@+id/checkBoxMatched"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="214dp"
         android:layout_y="266dp"
-        android:text="@string/cb_matched" />
+        android:text="@string/cb_matched"
+        android:visibility="gone" />
 
     <TextView
-        android:visibility="gone"
         android:id="@+id/textViewResult"
         android:layout_width="291dp"
         android:layout_height="wrap_content"
         android:layout_x="17dp"
         android:layout_y="516dp"
         android:text="@string/welcome"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -130,16 +143,20 @@
         android:layout_x="448dp"
         android:layout_y="8dp"
         android:contentDescription="@string/secugen_device_image"
-        android:src="@drawable/hamster4" />
+        android:src="@drawable/hamster4"
+        android:visibility="gone" />
 
     <Button
+        android:layout_centerInParent="true"
         android:id="@+id/buttonCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:layout_x="17dp"
         android:layout_y="372dp"
         android:text="@string/capture"
         android:textSize="28sp" />
 
-</AbsoluteLayout>
+</RelativeLayout>
